@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from werkzeug.contrib.cache import FileSystemCache
+#from werkzeug.contrib.cache import FileSystemCache
+#20200321 由于cache库更新，FileSystemCache从cache库更新到cachelib中，因此需要在依赖中将cache变为cachelib，此处导包也需要修改，否则不能使用。
+from cachelib import FileSystemCache
 
 
 class WechatCache(FileSystemCache):
